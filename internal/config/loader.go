@@ -8,7 +8,7 @@ import (
 )
 
 func (c *Config) GetConf() *Config {
-	yamlFile, err := ioutil.ReadFile("scrapy.yaml")
+	yamlFile, err := ioutil.ReadFile("servers.yaml")
 	if err != nil {
 		log.Printf("yamlFile.Get err #%v", err)
 
