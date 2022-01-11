@@ -1,7 +1,7 @@
 all: build test
 
 build:
-	go build -o bin/prism ./cmd/main.go
+	go build -o bin/prism ./main.go
 
 test:
 	go test ./ ...
