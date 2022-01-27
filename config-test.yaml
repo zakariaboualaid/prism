@@ -1,0 +1,12 @@
+http:
+  services:
+    - name: "web1"
+      strategy: RoundRobin
+      backends:
+        - url: http://localhost:8081/
+        - url: http://localhost:8082/
+    - name: "web2"
+      strategy: WeightedRoundRobin
+      backends:
+        - url: http://localhost:7071/
+        - url: http://localhost:7072/

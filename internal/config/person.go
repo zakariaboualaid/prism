@@ -2,8 +2,8 @@ package config
 
 import "github.com/zakariaboualaid/prism/internal/service"
 
-type Config struct {
+type PersonConfig struct {
 	Http struct {
-		Services []service.Service
+		Services []*service.Service `yaml:"services"`
 	} `yaml:"http"`
 }

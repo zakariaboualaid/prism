@@ -5,8 +5,9 @@ import (
 	"github.com/zakariaboualaid/prism/internal/strategy"
 )
 
+// Service holds data about desired services
 type Service struct {
-	Name     string
-	Backends []*backend.Backend
-	Strategy *strategy.Strategy
+	Name     string             `yaml:"name"`
+	Backends []*backend.Backend `yaml:"backends"`
+	Strategy *strategy.Strategy `yaml:"strategy"`
 }

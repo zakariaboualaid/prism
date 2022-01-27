@@ -1,0 +1,14 @@
+http:
+  services:
+  -
+    web1:
+      strategy: RoundRobin
+      backends:
+        - url: http://0.0.0.0/
+        - url: http://0.0.0.1/
+  -
+    web2:
+      strategy: RoundRobin
+      backends:
+        - url: http://0.0.0.2/
+        - url: http://0.0.0.3/

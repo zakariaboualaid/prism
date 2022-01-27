@@ -7,19 +7,16 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
-func (c *Config) GetConf() *Config {
-	yamlFile, err := ioutil.ReadFile("servers.yaml")
+func Parse(file string) *Config {
+	var c *Config
+	yamlFile, err := ioutil.ReadFile(file)
 	if err != nil {
 		log.Printf("yamlFile.Get err #%v", err)
 
 	}
-	err = yaml.Unmarshal([]byte(yamlFile), &c)
+	err = yaml.Unmarshal(yamlFile, &c)
 	if err != nil {
 		log.Fatalf("Unmarshal: %v", err)
-
-	}
-	if err != nil {
-		log.Fatalf("error: %v", err)
 
 	}
 	return c
